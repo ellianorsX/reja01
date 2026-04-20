@@ -15,12 +15,13 @@ app.set("views", "views");
 app.set("view engine", "ejs");
 
 // 4 routing codes
-app.get("/hello", function (req, res) {
-  res.end("HELLO WORLD by Ellianor");
+app.post("/create-item", (req, res) => {
+  console.log(req.body);
+  res.json({ test: "success" });
 });
 
-app.get("/gift", function (req, res) {
-  res.end("This gift for you by Ellianor");
+app.get("/", function (req, res) {
+  res.render("harid");
 });
 
 const server = http.createServer(app);
