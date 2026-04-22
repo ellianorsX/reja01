@@ -1,0 +1,31 @@
+{
+  "name": "Musk",
+  "profession": "Software Engineer",
+  "age": 23,
+  "residence": "S.Korea",
+  "address": "S.Korea, Busan",
+  "language": ["Uzbek", "Tajik", "Farsi", "Russian", "Korean", "English"],
+  "skills": ["HTML", "CSS", "JS", "NodeJS", "Python"],
+  "extra_skills": [
+    "Bootstrap",
+    "Materialize",
+    "Styling",
+    "Sass",
+    "Django",
+    "Flask"
+  ],
+  "work_place": ["IT company", "Remote Work", "Startup"],
+  "service_desc": "Diagnose and resolve technical issues, maintain systems",
+  "about_me": "I am particularly interested in developing solutions like POS systems.",
+  "city": "Samarkand",
+  "title": ["flower", "Seedlings", "gardner", "Old", "New"],
+  "flower_desc": [
+    "What is a flower?",
+    "What is a seedling?",
+    "Who is a gardener?"
+  ],
+  "flower_name": ["Pion", "Tulip", "Rose", "Fikus", "Cherry", "Blossom"],
+  "flower_price": ["17$", "22$", "15$", "21$", "30$", "19$", "12$", "31$"],
+  "famous_words": ["World is beautiful with flowers"],
+  "famous_name": ["Elon Musk"]
+}
