@@ -164,21 +164,41 @@
 //
 //
 //
-// ====********** M I T A S K -1  ************====================
+// ============********** M I T A S K -1  **********============
 
-function countLetter(letter, word) {
-  let count = 0;
+// function countLetter(letter, word) {
+//   let count = 0;
 
-  for (let i = 0; i < word.length; i++) {
-    if (word[i] === letter) {
-      count++;
-    }
-  }
-  return count;
-}
+//   for (let i = 0; i < word.length; i++) {
+//     if (word[i] === letter) {
+//       count++;
+//     }
+//   }
+//   return count;
+// }
 
-console.log(countLetter("a", "mashaqqat"));
+// console.log(countLetter("a", "mashaqqat"));
 
 // console.log(countLetter("m", "marjona"));
 
 // console.log(countLetter("u", "graduation"));
+//
+//
+//
+//============********** M I T A S K -2B  **********============
+
+function countDigits(str) {
+  let count = 0;
+
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] >= "0" && str[i] <= "9") {
+      count++;
+    }
+  }
+
+  return count;
+}
+
+// console.log(countDigits("jdwkueyfgh273y1827smnbdjhf"));
+
+console.log(countDigits("kwjiw123wrr3656ewff5eer"));
