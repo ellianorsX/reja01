@@ -1,48 +1,30 @@
-console.log("Web Serverni boshlash");
-const express = require("express");
-const res = require("express/lib/response");
-const app = express();
 const http = require("http");
-const fs = require("fs");
 
-let user;
-fs.readFile("database/user.json", "utf8", (err, data) => {
-  if (err) {
-    console.log("ERORR:", err);
-  } else {
-    user = JSON.parse(data);
-  }
-});
+const mongodb = require("mongodb");
 
-// 1 enterance codes
-app.use(express.static("public"));
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+let db;
+const connectionString =
+  "mongodb://elliasX:alliasmongo2026@ac-vfejyfe-shard-00-00.0jctfcc.mongodb.net:27017,ac-vfejyfe-shard-00-01.0jctfcc.mongodb.net:27017,ac-vfejyfe-shard-00-02.0jctfcc.mongodb.net:27017/Reja?ssl=true&replicaSet=atlas-hpr7d7-shard-0&authSource=admin&appName=Cluster0";
+mongodb.connect(
+  connectionString,
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  },
+  (err, client) => {
+    if (err) console.log("ERROR on connection MongoDB", err);
+    else {
+      console.log("MongoDB connection succeed");
 
-// 2 sections codes
-
-// 3 views codes
-app.set("views", "views");
-app.set("view engine", "ejs");
-
-// 4 routing codes
-app.post("/create-item", (req, res) => {
-  console.log(req.body);
-  res.json({ test: "success" });
-});
-
-app.get("/author", (req, res) => {
-  res.render("author", { user: user });
-});
-
-app.get("/", function (req, res) {
-  res.render("reja");
-});
-
-const server = http.createServer(app);
-let PORT = 3000;
-server.listen(PORT, function () {
-  console.log(
-    `The server is running successfully on port: ${PORT}, http://localhost:${PORT}`,
-  );
-});
+      module.exports = client;
+      const app = require("./app");
+      const server = http.createServer(app);
+      let PORT = 3000;
+      server.listen(PORT, function () {
+        console.log(
+          `The server is running successfully on port: ${PORT}, http://localhost:${PORT}`,
+        );
+      });
+    }
+  },
+);
