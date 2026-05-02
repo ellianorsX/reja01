@@ -187,18 +187,68 @@
 //
 //============********** M I T A S K -2B  **********============
 
-function countDigits(str) {
-  let count = 0;
+// function countDigits(str) {
+//   let count = 0;
 
-  for (let i = 0; i < str.length; i++) {
-    if (str[i] >= "0" && str[i] <= "9") {
-      count++;
+//   for (let i = 0; i < str.length; i++) {
+//     if (str[i] >= "0" && str[i] <= "9") {
+//       count++;
+//     }
+//   }
+
+//   return count;
+// }
+
+// // console.log(countDigits("jdwkueyfgh273y1827smnbdjhf"));
+
+// console.log(countDigits("kwjiw123wrr3656ewff5eer"));
+//
+//
+//
+//
+//============********** M I T A S K -3C  **********============
+
+class Shop {
+  constructor(non, lagmon, choy) {
+    this.non = non;
+    this.lagmon = lagmon;
+    this.choy = choy;
+  }
+
+  getTime() {
+    const now = new Date();
+    const hours = String(now.getHours()).padStart(2, "0");
+    const minutes = String(now.getMinutes()).padStart(2, "0");
+    return `${hours}:${minutes}`;
+  }
+
+  qoldiq() {
+    console.log(
+      `Ayni vaqtda ${this.getTime()} da ${this.non} ta nonimiz, ${this.lagmon}, ta lagmonimiz, ${this.choy} ta choyimiz mavjud`,
+    );
+  }
+
+  sotish(product, amount) {
+    if (this[product] >= amount) {
+      this[product] -= amount;
+      console.log(`Sotildi: ${amount} ta ${product}`);
+    } else {
+      console.log(`Kechirasiz yetarli ${product} mavjud emas!`);
     }
   }
 
-  return count;
+  qabul(product, amount) {
+    this[product] += amount;
+    console.log(`Qabul qilindi: ${amount} ta ${product}`);
+  }
 }
 
-// console.log(countDigits("jdwkueyfgh273y1827smnbdjhf"));
+//zahirani tekshiramiz
+const shop = new Shop(12, 4, 9);
 
-console.log(countDigits("kwjiw123wrr3656ewff5eer"));
+shop.qoldiq();
+
+shop.sotish("choy", 5);
+shop.qabul("non", 9);
+
+shop.qoldiq();
