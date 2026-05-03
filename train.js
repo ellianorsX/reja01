@@ -215,6 +215,7 @@ class Shop {
     this.choy = choy;
   }
 
+  //zahiramizga nisbattan vaqt ko'rsatgichi
   getTime() {
     const now = new Date();
     const hours = String(now.getHours()).padStart(2, "0");
@@ -222,12 +223,14 @@ class Shop {
     return `${hours}:${minutes}`;
   }
 
+  //cheffimizdan axborot
   qoldiq() {
     console.log(
       `Ayni vaqtda ${this.getTime()} da ${this.non} ta nonimiz, ${this.lagmon}, ta lagmonimiz, ${this.choy} ta choyimiz mavjud`,
     );
   }
 
+  //kassadan axborot
   sotish(product, amount) {
     if (this[product] >= amount) {
       this[product] -= amount;
