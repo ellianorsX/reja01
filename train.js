@@ -208,50 +208,73 @@
 //
 //============********** M I T A S K -3C  **********============
 
-class Shop {
-  constructor(non, lagmon, choy) {
-    this.non = non;
-    this.lagmon = lagmon;
-    this.choy = choy;
-  }
+// class Shop {
+//   constructor(non, lagmon, choy) {
+//     this.non = non;
+//     this.lagmon = lagmon;
+//     this.choy = choy;
+//   }
 
-  //zahiramizga nisbattan vaqt ko'rsatgichi
-  getTime() {
-    const now = new Date();
-    const hours = String(now.getHours()).padStart(2, "0");
-    const minutes = String(now.getMinutes()).padStart(2, "0");
-    return `${hours}:${minutes}`;
-  }
+//   //zahiramizga nisbattan vaqt ko'rsatgichi
+//   getTime() {
+//     const now = new Date();
+//     const hours = String(now.getHours()).padStart(2, "0");
+//     const minutes = String(now.getMinutes()).padStart(2, "0");
+//     return `${hours}:${minutes}`;
+//   }
 
-  //cheffimizdan axborot
-  qoldiq() {
-    console.log(
-      `Ayni vaqtda ${this.getTime()} da ${this.non} ta nonimiz, ${this.lagmon}, ta lagmonimiz, ${this.choy} ta choyimiz mavjud`,
-    );
-  }
+//   //cheffimizdan axborot
+//   qoldiq() {
+//     console.log(
+//       `Ayni vaqtda ${this.getTime()} da ${this.non} ta nonimiz, ${this.lagmon}, ta lagmonimiz, ${this.choy} ta choyimiz mavjud`,
+//     );
+//   }
 
-  //kassadan axborot
-  sotish(product, amount) {
-    if (this[product] >= amount) {
-      this[product] -= amount;
-      console.log(`Sotildi: ${amount} ta ${product}`);
-    } else {
-      console.log(`Kechirasiz yetarli ${product} mavjud emas!`);
-    }
-  }
+//   //kassadan axborot
+//   sotish(product, amount) {
+//     if (this[product] >= amount) {
+//       this[product] -= amount;
+//       console.log(`Sotildi: ${amount} ta ${product}`);
+//     } else {
+//       console.log(`Kechirasiz yetarli ${product} mavjud emas!`);
+//     }
+//   }
 
-  qabul(product, amount) {
-    this[product] += amount;
-    console.log(`Qabul qilindi: ${amount} ta ${product}`);
-  }
+//   qabul(product, amount) {
+//     this[product] += amount;
+//     console.log(`Qabul qilindi: ${amount} ta ${product}`);
+//   }
+// }
+
+// //zahirani tekshiramiz
+// const shop = new Shop(12, 4, 9);
+
+// shop.qoldiq();
+
+// shop.sotish("choy", 5);
+// shop.qabul("non", 9);
+
+// shop.qoldiq();
+
+//
+//
+//
+//
+//
+//
+//============********** M I T A S K -4D  **********============
+
+function malumotTarkibiniTekshiramiz(kerakligap1, kerakligap2) {
+  let sorted1 = kerakligap1.split("").sort().join("");
+  let sorted2 = kerakligap2.split("").sort().join("");
+
+  return sorted1 === sorted2;
 }
 
-//zahirani tekshiramiz
-const shop = new Shop(12, 4, 9);
+console.log(malumotTarkibiniTekshiramiz("marjona", "anojram"));
 
-shop.qoldiq();
+console.log(
+  malumotTarkibiniTekshiramiz("salommenAIEngineerman", "EIAnemlomsanginmanree"),
+);
 
-shop.sotish("choy", 5);
-shop.qabul("non", 9);
-
-shop.qoldiq();
+console.log(malumotTarkibiniTekshiramiz("pilotlikzorkasb", "rozliptosabkw"));
