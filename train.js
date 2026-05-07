@@ -264,17 +264,36 @@
 //
 //============********** M I T A S K -4D  **********============
 
-function malumotTarkibiniTekshiramiz(kerakligap1, kerakligap2) {
-  let sorted1 = kerakligap1.split("").sort().join("");
-  let sorted2 = kerakligap2.split("").sort().join("");
+// function malumotTarkibiniTekshiramiz(kerakligap1, kerakligap2) {
+//   let sorted1 = kerakligap1.split("").sort().join("");
+//   let sorted2 = kerakligap2.split("").sort().join("");
 
-  return sorted1 === sorted2;
+//   return sorted1 === sorted2;
+// }
+
+// console.log(malumotTarkibiniTekshiramiz("marjona", "anojram"));
+
+// console.log(
+//   malumotTarkibiniTekshiramiz("salommenAIEngineerman", "EIAnemlomsanginmanree"),
+// );
+
+// console.log(malumotTarkibiniTekshiramiz("pilotlikzorkasb", "rozliptosabkw"));
+//
+//
+//
+//
+//============********** M I T A S K -4D  **********============
+
+function getReverse(srt) {
+  let result = "";
+
+  for (let i = srt.length - 1; i >= 0; i--) {
+    result = result + srt[i];
+  }
+
+  return result;
 }
 
-console.log(malumotTarkibiniTekshiramiz("marjona", "anojram"));
+// console.log(getReverse("marjona"));
 
-console.log(
-  malumotTarkibiniTekshiramiz("salommenAIEngineerman", "EIAnemlomsanginmanree"),
-);
-
-console.log(malumotTarkibiniTekshiramiz("pilotlikzorkasb", "rozliptosabkw"));
+console.log(getReverse("Im Python Engineer"));
