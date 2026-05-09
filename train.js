@@ -284,16 +284,37 @@
 //
 //============********** M I T A S K -5E  **********============
 
-function getReverse(srt) {
-  let result = "";
+// function getReverse(srt) {
+//   let result = "";
 
-  for (let i = srt.length - 1; i >= 0; i--) {
-    result = result + srt[i];
+//   for (let i = srt.length - 1; i >= 0; i--) {
+//     result = result + srt[i];
+//   }
+
+//   return result;
+// }
+
+// // console.log(getReverse("marjona"));
+
+// console.log(getReverse("Im Python Engineer"));
+
+//============********** M I T A S K -6F  **********============
+
+function findDoublers(str) {
+  let egizakHarf = [];
+
+  for (let i = 0; i < str.length; i++) {
+    let endi = str[i];
+
+    if (egizakHarf.includes(endi)) {
+      return true;
+    } else egizakHarf.push(endi);
   }
 
-  return result;
+  return false;
 }
 
-// console.log(getReverse("marjona"));
-
-console.log(getReverse("Im Python Engineer"));
+console.log(findDoublers("samarkand"));
+console.log(findDoublers("southseoul"));
+console.log(findDoublers("engineer"));
+console.log(findDoublers("windows"));
