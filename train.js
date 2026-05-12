@@ -300,21 +300,30 @@
 
 //============********** M I T A S K -6F  **********============
 
-function findDoublers(str) {
-  let egizakHarf = [];
+// function findDoublers(str) {
+//   let egizakHarf = [];
 
-  for (let i = 0; i < str.length; i++) {
-    let endi = str[i];
+//   for (let i = 0; i < str.length; i++) {
+//     let endi = str[i];
 
-    if (egizakHarf.includes(endi)) {
-      return true;
-    } else egizakHarf.push(endi);
-  }
+//     if (egizakHarf.includes(endi)) {
+//       return true;
+//     } else egizakHarf.push(endi);
+//   }
 
-  return false;
+//   return false;
+// }
+
+// console.log(findDoublers("samarkand"));
+// console.log(findDoublers("southseoul"));
+// console.log(findDoublers("engineer"));
+// console.log(findDoublers("windows"));
+
+//============********** M I T A S K -7G  **********============
+
+function getHighestIndex(arr) {
+  const engKatta = Math.max(...arr);
+  return arr.indexOf(engKatta);
 }
 
-console.log(findDoublers("samarkand"));
-console.log(findDoublers("southseoul"));
-console.log(findDoublers("engineer"));
-console.log(findDoublers("windows"));
+console.log(getHighestIndex([12, 44, 9, 77, 36]));
