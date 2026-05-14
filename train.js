@@ -321,9 +321,23 @@
 
 //============********** M I T A S K -7G  **********============
 
-function getHighestIndex(arr) {
-  const engKatta = Math.max(...arr);
-  return arr.indexOf(engKatta);
+// function getHighestIndex(arr) {
+//   const engKatta = Math.max(...arr);
+//   return arr.indexOf(engKatta);
+// }
+
+// console.log(getHighestIndex([12, 44, 9, 77, 36]));
+
+//============********** M I T A S K -8H  **********============
+
+function getPositive(arr) {
+  let natija = "";
+  for (son of arr)
+    if (son > 0) {
+      natija = natija + String(son);
+    }
+
+  return natija;
 }
 
-console.log(getHighestIndex([12, 44, 9, 77, 36]));
+console.log(getPositive([3, 88, -9, 7, -23, 11, -99]));
