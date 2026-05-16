@@ -330,14 +330,40 @@
 
 //============********** M I T A S K -8H  **********============
 
-function getPositive(arr) {
-  let natija = "";
-  for (son of arr)
-    if (son > 0) {
-      natija = natija + String(son);
-    }
+// function getPositive(arr) {
+//   let natija = "";
+//   for (son of arr)
+//     if (son > 0) {
+//       natija = natija + String(son);
+//     }
 
-  return natija;
+//   return natija;
+// }
+
+// console.log(getPositive([3, 88, -9, 7, -23, 11, -99]));
+
+//============********** M I T A S K -9I  **********============
+function majorityElement(arr) {
+  let counts = {};
+
+  for (let raqam of arr) {
+    if (raqam in counts) {
+      counts[raqam] = counts[raqam] + 1;
+    } else {
+      counts[raqam] = 1;
+    }
+  }
+
+  let engKop = null;
+  let maxRaqam = 0;
+
+  for (let result in counts) {
+    if (counts[result] > maxRaqam) {
+      maxRaqam = counts[result];
+      engKop = result;
+    }
+  }
+  return engKop;
 }
 
-console.log(getPositive([3, 88, -9, 7, -23, 11, -99]));
+console.log(majorityElement([9, 9, 4, 5, 0, 9, 5, 3]));
