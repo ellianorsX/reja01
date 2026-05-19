@@ -343,27 +343,51 @@
 // console.log(getPositive([3, 88, -9, 7, -23, 11, -99]));
 
 //============********** M I T A S K -9I  **********============
-function majorityElement(arr) {
-  let counts = {};
+// function majorityElement(arr) {
+//   let counts = {};
 
-  for (let raqam of arr) {
-    if (raqam in counts) {
-      counts[raqam] = counts[raqam] + 1;
-    } else {
-      counts[raqam] = 1;
+//   for (let raqam of arr) {
+//     if (raqam in counts) {
+//       counts[raqam] = counts[raqam] + 1;
+//     } else {
+//       counts[raqam] = 1;
+//     }
+//   }
+
+//   let engKop = null;
+//   let maxRaqam = 0;
+
+//   for (let result in counts) {
+//     if (counts[result] > maxRaqam) {
+//       maxRaqam = counts[result];
+//       engKop = result;
+//     }
+//   }
+//   return engKop;
+// }
+
+// console.log(majorityElement([9, 9, 4, 5, 0, 9, 5, 3]));
+
+//============********** M I T A S K -10J**********============
+
+function findLongestWord(str) {
+  let words = str.split(" ");
+
+  let longestWord = "";
+
+  for (let i = 0; i < words.length; i++) {
+    if (words[i].length > longestWord.length) {
+      longestWord = words[i];
     }
   }
 
-  let engKop = null;
-  let maxRaqam = 0;
-
-  for (let result in counts) {
-    if (counts[result] > maxRaqam) {
-      maxRaqam = counts[result];
-      engKop = result;
-    }
-  }
-  return engKop;
+  return longestWord;
 }
 
-console.log(majorityElement([9, 9, 4, 5, 0, 9, 5, 3]));
+console.log(
+  findLongestWord(
+    "My Nationality is Uzbek and I from Uzbekistan and also I am AI Engineer",
+  ),
+);
+
+console.log(findLongestWord("Also my project number 1 in Uzbekistan"));
