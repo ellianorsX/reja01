@@ -370,24 +370,24 @@
 
 //============********** M I T A S K -10J**********============
 
-function findLongestWord(str) {
-  let words = str.split(" ");
+// function findLongestWord(str) {
+//   let words = str.split(" ");
 
-  let longestWord = "";
+//   let longestWord = "";
 
-  for (let i = 0; i < words.length; i++) {
-    if (words[i].length > longestWord.length) {
-      longestWord = words[i];
-    }
-  }
+//   for (let i = 0; i < words.length; i++) {
+//     if (words[i].length > longestWord.length) {
+//       longestWord = words[i];
+//     }
+//   }
 
-  return longestWord;
-}
+//   return longestWord;
+// }
 
-console.log(
-  findLongestWord(
-    "My Nationality is Uzbek and I from Uzbekistan and also I am AI Engineer",
-  ),
-);
+// console.log(
+//   findLongestWord(
+//     "My Nationality is Uzbek and I from Uzbekistan and also I am AI Engineer",
+//   ),
+// );
 
-console.log(findLongestWord("Also my project number 1 in Uzbekistan"));
+// console.log(findLongestWord("Also my project number 1 in Uzbekistan"));
